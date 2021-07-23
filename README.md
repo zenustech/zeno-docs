@@ -8,7 +8,7 @@
 ## 使用方法
 《泽森科工教学指南》支持随时随地网页访问，[《泽森科工教学指南》网址](https://github.com/jiayaozhang/ZenusTech-Documentation.git)。用户可以在《泽森科工教学指南》很方便地进行内容的检索。 
 
-![泽森科工教学指南手册检索](docs/_static/image/search.png)
+![泽森科工教学指南手册检索](![image](https://user-images.githubusercontent.com/38579506/126774320-93ed7e5e-b587-42fb-bab6-4d8497ad3ff5.png))
 
 
 ## 说明
