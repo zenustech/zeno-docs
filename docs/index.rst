@@ -5,18 +5,20 @@
 
 :github_url: https://github.com/jiayaozhang/ZenusTech-Documentation.git
 
-**************
-ZenusTech Study Tutorials
-**************
+**************************
+泽森科工教学指南
+**************************
 
 
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: zeno examples
+   :caption: 高性能仿真案例
 
    content/Examples/HelloWorld
-   content/Examples/ForLoop
+   content/Examples/TagandLines
+   content/Examples/VisualData
+   
 
 
 .. toctree::
@@ -33,3 +35,11 @@ ZenusTech Study Tutorials
    :caption: Speed
 
    content/Speed/transfer
+
+
+   .. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: We are hiring !
+
+   content/HirePeople/investment

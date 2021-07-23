@@ -19,7 +19,7 @@
 
 project = 'ZenusTech Documentations'
 copyright = '2021, Jiayao Zhang '
-author = 'Jiayao Zhangs'
+author = 'Jiayao Zhang'
 
 
 # -- General configuration ---------------------------------------------------
