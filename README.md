@@ -39,7 +39,7 @@
 
 4. 审核通过后，您的内容将出现在本手册中。
 
-
+ 
 NOTE: 如果需要加入图片，请参考docs/content/travel/saudi.rst。并且把图片上传到docs/_static/image这个文件夹
 
 
