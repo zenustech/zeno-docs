@@ -4,7 +4,7 @@
 开发者指南
 ======
 
-开源的节点系统，我们只需要添加我们的算法就能加入更多更精彩的仿真啦！
+开源的节点系统，只需要给出你们的idea，就能用ZENO实现出更多更精彩的仿真啦！
 -----------
 
 .. image:: ../../_static/image/ZENO/rigid3.jpg
@@ -18,7 +18,7 @@
 
 .. image:: ../../_static/image/ZENO/crag_hit_water.gif
 
-.. image:: ../../_static/image/ZENO/saudi/shock.gif
+.. image:: ../../_static/image/ZENO/shock.gif
 
 
 ZENO高性能计算
@@ -99,17 +99,18 @@ ZENO节点主要是由c++来写的。通过Qt5编译器来连接节点，这些�
 
 下载
 -------------
-Go to the release page, and click Assets -> download zeno-linux-20xx.x.x.tar.gz. Then, extract this archive, and simply run ./start.sh, then the node editor window will shows up if everything is working well.
+点击到 release page, 然后勾选 Assets -> download zeno-linux-20xx.x.x.tar.gz. 解压zip文件, 然后 run ./start.sh, 然后节点系统的编译器就会自动显示出来
 
 
 使用
 ---------------
-There are some example graphs in the ./arts/ folder, you may open them in the editor and have fun! Currently rigid3.zsg, FLIPSolver.zsg, prim.zsg, and lennardjones.zsg are confirmed to be functional. Hint: To run an animation for 100 frames, change the 1 on the top-left of node editor to 100, then click Execute. Also MMB to drag in the node editor, LMB click on sockets to create connections. MMB drag in the viewport to orbit camera, Shift+MMB to pan camera.
+在arts文件夹下面有一些样例图，你可以在编译器将他们打开然后设计出自己的物理仿真模型。 目前rigid3.zsg, FLIPSolver.zsg, prim.zsg, 和 lennardjones.zsg还在完善中
+提示：如果想要运行一个100帧的动画，可以右上角的1改成100，并点击execute。
+
 
 Bug 报告
 -------------------
-If you find the binary version didn't worked properly or some error message has been thrown on your machine, please let me know by opening an issue on GitHub, thanks for you support!
-
+如果你发现binary版本不对或者不匹配，欢迎在ZENO下面提issue
 
 
 开发者使用指南
@@ -118,7 +119,7 @@ If you find the binary version didn't worked properly or some error message has 
 安装需求
 ----------
 
-You need a C++17 compiler, CMake 3.12+, and Python 3.6+ to build ZENO; NumPy and PyQt5 to run ZENO editor. Other requirements like Pybind11 or GLAD are self-contained and you don't have to worry installing them manually.
+你需要有 C++17 compiler, CMake 3.12+, and Python 3.6+ 来构建 ZENO; NumPy and PyQt5 运行ZENO的编辑器. Pybind11 或者 GLAD 是内置的，所以你不必担心是否需要自己安装
 
 Arch Linux
 -----------
@@ -136,18 +137,21 @@ sudo python -m pip install numpy PyQt5
 
 Windows 10
 --------------
-1. Install Python 3.8 64-bit. IMPORTANT: make sure you Add Python 3.8 to PATH! After that rebooting your computer would be the best.
-2. Start CMD in Administrator mode and type these commands:
+1. Install Python 3.8 64-bit. 重要: 确保你把python 3.8加入到路径里面! 重启后效果更佳！
+2. 在命令行敲CMD并输入以下命令:
 
 python -m pip install numpy PyQt5
 
+（搞笑的事实：你会被指向Microsoft store如果python的路径没有安装正确的话 ：） 所以确保下载和安装成功，没有error，一般的warnings是ok的）
 
-(Fun fact: you will be redirected to Microsoft Store if python is not added to PATH properly :) Make sure it starts to downloading and installing successfully without ERROR (warnings are OK though).
+出现这种错误时: Could not install packages due to an EnvironmentError: 
+[Errno 13] Permission denied: 'c:\\python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll'': 
+尝试退出一些杀毒软件比如说：360杀毒软件, 因为他们可能会阻止 pip 复制 DLL files.
 
-If you got ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: 'c:\\python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll'': Quit anti-virus softwares (e.g. 360), they probably prevent pip from copying DLL files.
 
-If you got ImportError: DLL load failed while importing QtGui: Try install Microsoft Visual C++ Redistributable.
+如果你有导入错误： 当输入QtGui的时候，DLL输入失败：尝试安装 Microsoft Visual C++ Redistributable。
 
-3. Install Visual Studio 2019 Community Edition or later version (for C++17 support in MSVC).
+
+1. 安装 Visual Studio 2019 社区版或者更后的版本 ( C++17 支持的).
 
 
