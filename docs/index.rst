@@ -33,6 +33,27 @@
 .. toctree::
    :glob:
    :maxdepth: 1
+   :caption: ZENO中的可视化功能
+
+   content/HighVisual/visual   
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: ZENO中的AlgoLink功能
+
+   content/AlgoLink/visual   
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: ZENO中的ZFX(x)功能
+
+   content/ZFX(x)/visual
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
    :caption: We are hiring !
 
    content/HirePeople/investment
