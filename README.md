@@ -1,12 +1,12 @@
 # 泽森科工教学指南
-[《泽森科工教学指南》](https://github.com/jiayaozhang/ZenusTech-Documentation.git)诞生于2021年7月23日。本手册旨在集中与分享在研发ZENO过程中的诸多感悟、经验和技巧。《泽森科工教学指南》支持网页在线预览及信息检索。 我们希望本手册可以在我们和社区的共同维护下一直存活下去，并能给新入职的ZENO员工、在读学生、以及相关从业人员带来帮助。 感谢参与本手册编辑的作者们！同时期待更多作者们的加入！ 
+[《泽森科工教学指南》](https://zenustech-documentation.readthedocs.io/zh/latest/)诞生于2021年7月23日。本手册旨在集中与分享在研发ZENO过程中的诸多感悟、经验和技巧。《泽森科工教学指南》支持网页在线预览及信息检索。 我们希望本手册可以在我们和社区的共同维护下一直存活下去，并能给新入职的ZENO员工、在读学生、以及相关从业人员带来帮助。 感谢参与本手册编辑的作者们！同时期待更多作者们的加入！ 
 
-网页同步版本网址：[《泽森科工教学指南》](https://github.com/jiayaozhang/ZenusTech-Documentation.git)。下图截取时间：2021年1月27日。本网站将在社区的协助下持续更新。 
+网页同步版本网址：[《泽森科工教学指南》](https://zenustech-documentation.readthedocs.io/zh/latest/)。下图截取时间：2021年1月27日。本网站将在社区的协助下持续更新。 
 
 ![《泽森科工教学指南》](docs/_static/image/website.png)
 
 ## 使用方法
-《泽森科工教学指南》支持随时随地网页访问，[《泽森科工教学指南》网址](https://github.com/jiayaozhang/ZenusTech-Documentation.git)。用户可以在《泽森科工教学指南》很方便地进行内容的检索。 
+《泽森科工教学指南》支持随时随地网页访问，[《泽森科工教学指南》网址](https://zenustech-documentation.readthedocs.io/zh/latest/)。用户可以在《泽森科工教学指南》很方便地进行内容的检索。 
 
 ![泽森科工教学指南手册检索](docs/_static/image/search.png)
 
@@ -33,14 +33,14 @@
 
 ![更新你的本地仓库](docs/_static/image/renew_repo.png)
 
-2. 修改你fork的repo。如何修改？例如想添加驾校信息，可以编辑'docs/content/life/drive.rst'；想添加全新的小节，例如在生活篇中加入 '美食'节（假如没有这个小节），可以在'docs/content/life'中新建'food.rst'文件，并添加相应内容，然后在`docs/index.rst`文件相应位置加入新的一行`content/life/food`。可参考'drive.rst'进行编辑。  
+2. 修改你fork的repo。如何修改？例如想添加物理仿真信息，可以编辑'docs/content/'；想添加全新的小节，例如在开发者中加入 '流体仿真'节（假如没有这个小节），可以在'docs/content/ZENO'中新建'fluid.rst'文件，并添加相应内容，然后在`docs/index.rst`文件相应位置加入新的一行`content/ZENO/fluid`。  
 
 3. 在本仓库中请求一个[pull request]. 点击new pull request, 点击compare across fork, pull request的左侧选中本仓库，右侧选中你的仓库。 确认后提交request. 
 
 4. 审核通过后，您的内容将出现在本手册中。
 
  
-NOTE: 如果需要加入图片，请参考docs/content/travel/saudi.rst。并且把图片上传到docs/_static/image这个文件夹
+NOTE: 如果需要加入图片，请参考docs/content/examples。并且把图片上传到docs/_static/image这个文件夹
 
 
 ## 我不想学Github的使用，我只是想贡献一份力量
@@ -56,6 +56,7 @@ NOTE: 如果需要加入图片，请参考docs/content/travel/saudi.rst。并且
 * [Janice 张嘉瑶 ](https://github.com/jiayaozhang)
 * [archibate 彭于斌](https://github.com/archibate)
 * [littlemine 王鑫磊](https://github.com/littlemine)
+* [zhxx1987 张心欣](https://github.com/zhxx1987)
 
 以上就是全部啦，谢谢大家的贡献！！
 
