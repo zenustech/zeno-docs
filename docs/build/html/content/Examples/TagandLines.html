@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>面向高性能物理计算而研发的可视化编程系统 &mdash; ZenusTech Documentations  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> ZenusTech Documentations
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">zeno examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HelloWorld.html">面向高性能物理计算而研发的可视化编程系统</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HelloWorld.html#example-1-helloworld">Example 1 HelloWorld</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ForLoop.html">面向高性能物理计算而研发的可视化编程系统</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ForLoop.html#example-4-zenofor">Example 4 在Zeno中执行一个For循环</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ZenusTech Documentations</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>面向高性能物理计算而研发的可视化编程系统</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/jiayaozhang/ZenusTech-Documentation.git" class="fa fa-github"> 在 GitHub 上修改</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>面向高性能物理计算而研发的可视化编程系统<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="zenotag">
+<h2>ZENO中的Tag和连线,关键词<a class="headerlink" href="#zenotag" title="永久链接至标题">¶</a></h2>
+<p>Zeno中的节点有以下几个重要的编辑概念</p>
+<p>Control Tag</p>
+<p>这些tag浮动于节点上方，被开启后会显示为绿色， 他们分别是：</p>
+<p>Out：</p>
+<p>当该Tag被点亮时，由ZENO节点图所定义的程序逻辑， 无论多么复杂， 到达该节点的通路上的前置计算节点（以及通路上所需要的数据和数据所需的前置计算结点）会被必然依序执行（每个frame）， 直到最后一个out节点为止。节点的执行顺序由zeno系统保证：任何一个被需要的节点必然在任何需要其的节点之前被执行。Mute：当该Tag被点亮时，相应的节点会被取消执行， 注意，这也许会在整个图中引入错误， 比如被跳过的节点正好将一个数据类型A转换为后续计算所需要的数据类型B时。谨慎使用。ONCE：当该Tag被点亮时， 所标记的节点只会在全局被执行一次。ZENO系统的最基本计算单位为substep（subframe）， 所有位于节点编辑器中的计算， 都会默认地被每个frame的每个subframe执行，然而很显然我们不是总需要这么做：比如读取一些与时间无关的静态的场景文件时，读取操作只需要执行一次。  对于这样的目的， 我们可以指定ONCE。</p>
+<p>VIEW：</p>
+<p>被打了VIEW的节点， 其计算结果， 当是renderable的物体时，会进入到zeno的3D可视化窗口被可视化， 可视化的方法由zeno的可视化节点决定。被标记VIEW的节点， 其所有前置计算也会被正确执行。当一个frame存在多个subframe， 以及当一个被标记数据可能在计算顺序中被先后修改时，只有最后一个subframe的最后一次修改结果才会进入可视化界面进行可视化。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2021, Jiayao Zhang 
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

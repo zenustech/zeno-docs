@@ -13,11 +13,10 @@ ZenusTech Study Tutorials
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: 基础必备篇
+   :caption: zeno examples
 
-   content/basic/list
-   content/basic/group_list
-   content/basic/bonus-getting
+   content/Examples/HelloWorld
+   content/Examples/ForLoop
 
 
 .. toctree::
@@ -25,33 +24,12 @@ ZenusTech Study Tutorials
    :maxdepth: 1
    :caption: 生活篇
 
-
-   content/life/drive
-   content/life/rent_car
-   content/life/buy_car
-   content/life/shopping
-   content/life/sport
-   content/life/ticket
-   content/life/food
-   content/life/music
-   content/life/misc
-
-   
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :caption: 旅游篇
-
-   content/travel/saudi
+   content/HPC/saudi
 
 
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: 财务篇
+   :caption: Speed
 
-   content/finance/transfer
-   content/finance/investment
-   content/finance/open_account
-
-
+   content/Speed/transfer

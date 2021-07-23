@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'KAUSTian_Handbook_CN'
-copyright = '2021, Guocheng Qian'
-author = 'Guocheng Qian'
+project = 'ZenusTech Documentations'
+copyright = '2021, Jiayao Zhang '
+author = 'Jiayao Zhangs'
 
 
 # -- General configuration ---------------------------------------------------
