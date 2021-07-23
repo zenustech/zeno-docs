@@ -20,13 +20,8 @@
     ├── index.rst               # 目录手册
     ├── conf.py                 # Sphinx网页渲染所需要的配置文件
     ├── content                 # 泽森科工教学指南手册主要内容
-        ├── life                # 生活篇
-        │     ├── drive.rst     # 驾校，学车
-        │     ├── shopping.rst  # 购物
-        │
-        ├── finance             # 财务篇
-        │     ├── tranfer.rst   # 转账回国
-        └── ...
+        ├── 开发者手册               # 
+        │........
 
     
 ## 如何贡献（成为本手册的作者）
