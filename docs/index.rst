@@ -9,6 +9,13 @@
 泽森科工教学指南
 **************************
 
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: 开发者指南
+
+   content/HPC/readme
+
 
 .. toctree::
    :glob:
@@ -18,26 +25,12 @@
    content/Examples/HelloWorld
    content/Examples/TagandLines
    content/Examples/VisualData
-   
+   content/Examples/ForLoop
+   content/Examples/ConditionControl
+   content/Examples/FrameZeno
 
 
 .. toctree::
-   :glob:
-   :maxdepth: 1
-   :caption: 生活篇
-
-   content/HPC/saudi
-
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :caption: Speed
-
-   content/Speed/transfer
-
-
-   .. toctree::
    :glob:
    :maxdepth: 1
    :caption: We are hiring !

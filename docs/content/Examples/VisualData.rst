@@ -1,7 +1,7 @@
 :github_url: https://github.com/jiayaozhang/ZenusTech-Documentation.git
 
 
-Example 2 在zeno读取并显示一个三维文件
+Example 3 在zeno读取并显示一个三维文件
 =======
 
 

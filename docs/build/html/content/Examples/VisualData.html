@@ -3,20 +3,25 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>高性能物理计算而研发的可视化编程系统 &mdash; ZenusTech Documentations  文档</title>
+  <title>Example 3 在zeno读取并显示一个三维文件 &mdash; 泽森科工教学指南  文档</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
 
   
   
+
   
+  
+
   
 
   
@@ -26,17 +31,19 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" /> 
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Example 4 在Zeno中执行一个For循环" href="ForLoop.html" />
+    <link rel="prev" title="Example 2 Tag和连线,关键词" href="TagandLines.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +57,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> ZenusTech Documentations
+            <a href="../../index.html" class="icon icon-home"> 泽森科工教学指南
           
 
           
@@ -81,14 +88,74 @@
               
             
             
-              <p class="caption"><span class="caption-text">zeno examples</span></p>
+              <p class="caption" role="heading"><span class="caption-text">开发者指南</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="HelloWorld.html">面向高性能物理计算而研发的可视化编程系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="HelloWorld.html#example-1-helloworld">Example 1 HelloWorld</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC/readme.html">开发者指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id2">开源的节点系统，我们只需要添加我们的算法就能加入更多更精彩的仿真啦！</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id3">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#zeno">ZENO高性能计算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id4">开发ZENO的原因</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id5">柔韧性</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ForLoop.html">面向高性能物理计算而研发的可视化编程系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ForLoop.html#example-4-zenofor">Example 4 在Zeno中执行一个For循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id6">性能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id7">控制流</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id8">统一性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id9">可拓展性接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id10">整合性</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id11">用户终端安装</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id12">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id13">使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#bug">Bug 报告</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id14">开发者使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id15">安装需求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#arch-linux">Arch Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#ubuntu-20-04">Ubuntu 20.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#windows-10">Windows 10</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">高性能仿真案例</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="HelloWorld.html">Example 1 HelloWorld</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HelloWorld.html#zeno">ZENO几个重要概念：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TagandLines.html">Example 2 Tag和连线,关键词</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TagandLines.html#zeno">Zeno中的节点有以下几个重要的编辑概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TagandLines.html#control-tag">Control Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TagandLines.html#out">Out：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TagandLines.html#mute">Mute：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TagandLines.html#once">Once：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TagandLines.html#view">View：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TagandLines.html#id1">数据端口连线：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example 3 在zeno读取并显示一个三维文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ForLoop.html">Example 4 在Zeno中执行一个For循环</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ForLoop.html#for">4.1 for循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ForLoop.html#for-each">4.2 for Each循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ForLoop.html#break-for">4.3 Break For 循环</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ConditionControl.html">Example 5 在ZENO中进行条件控制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ConditionControl.html#zeno">在ZENO中进行条件控制</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FrameZeno.html">Example 6 封装一个zeno子图并让他被其它场景调用</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">We are hiring !</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HirePeople/investment.html">We are still hiring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HirePeople/investment.html#id1">招收对象</a></li>
 </ul>
 </li>
 </ul>
@@ -106,7 +173,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">ZenusTech Documentations</a>
+          <a href="../../index.html">泽森科工教学指南</a>
         
       </nav>
 
@@ -133,18 +200,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>高性能物理计算而研发的可视化编程系统</li>
+      <li>Example 3 在zeno读取并显示一个三维文件</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <!-- User defined GitHub URL -->
               <a href="https://github.com/jiayaozhang/ZenusTech-Documentation.git" class="fa fa-github"> 在 GitHub 上修改</a>
@@ -161,12 +230,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>高性能物理计算而研发的可视化编程系统<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>Example 2 在zeno读取并显示一个三维文件&lt;img src=”<a class="reference external" href="https://pic1.zhimg.com/v2-99ca514059f8ffde210a040f4b209160_b.jpg">https://pic1.zhimg.com/v2-99ca514059f8ffde210a040f4b209160_b.jpg</a>” data-caption=”” data-size=”normal” data-rawwidth=”1567” data-rawheight=”929” class=”origin_image zh-lightbox-thumb” width=”1567” data-original=”<a class="reference external" href="https://pic1.zhimg.com/v2-99ca514059f8ffde210a040f4b209160_r.jpg">https://pic1.zhimg.com/v2-99ca514059f8ffde210a040f4b209160_r.jpg</a>”/&gt;</p>
-<hr class="docutils" />
+  <div class="section" id="example-3-zeno">
+<h1>Example 3 在zeno读取并显示一个三维文件<a class="headerlink" href="#example-3-zeno" title="永久链接至标题">¶</a></h1>
+<img alt="../../_images/2_3D_1.jpg" src="../../_images/2_3D_1.jpg" />
 <p>在zeno中可以读取并显示三维物体(这个功能还在进步中, 会做成自动对输入多态和输出多态的支持)比如读取一个mesh,并显示(上图)</p>
 <p>或者:读取一个VDB 数据将SDF转换为polygon并显示(下图):</p>
+<img alt="../../_images/2_3D_2.jpg" src="../../_images/2_3D_2.jpg" />
 </div>
 
 
@@ -174,28 +243,29 @@
            
           </div>
           <footer>
-  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ForLoop.html" class="btn btn-neutral float-right" title="Example 4 在Zeno中执行一个For循环" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="TagandLines.html" class="btn btn-neutral float-left" title="Example 2 Tag和连线,关键词" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; 版权所有 2021, Jiayao Zhang 
+        &#169; 版权所有 2021, Jiayao Zhang .
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
     
     由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
 
 </footer>
-
         </div>
       </div>
 

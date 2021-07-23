@@ -1,7 +1,7 @@
 :github_url: https://github.com/jiayaozhang/ZenusTech-Documentation.git
 
 
-ZENO中的Tag和连线,关键词
+Example 2 Tag和连线,关键词
 =======
 
 
@@ -45,7 +45,7 @@ View：
 .. image:: ../../_static/image/Examples/3_Tag_2.jpg
 
 
-除了特殊端口，SRC，COND，DST以外的端口即数据端口，当一个右侧的数据端口被连向一个左侧的数据端口时，两个节点即构成了计算依赖关系， 前序节点会优先于后续节点被执行， 后续节点的数据输入为所对应连接的数据出口。特殊端口：DST， SRC除了数据依赖关系外， 可以通过DST和SRC连接来强制指定计算执行顺序， 考虑如下计算图：<img src="https://pic2.zhimg.com/v2-49452c8f3952f13c43440c3a5e662915_b.jpg" data-caption="" data-size="normal" data-rawwidth="1772" data-rawheight="1004" class="origin_image zh-lightbox-thumb" width="1772" data-original="https://pic2.zhimg.com/v2-49452c8f3952f13c43440c3a5e662915_r.jpg"/>
+除了特殊端口，SRC，COND，DST以外的端口即数据端口，当一个右侧的数据端口被连向一个左侧的数据端口时，两个节点即构成了计算依赖关系， 前序节点会优先于后续节点被执行， 后续节点的数据输入为所对应连接的数据出口。特殊端口：DST， SRC除了数据依赖关系外， 可以通过DST和SRC连接来强制指定计算执行顺序， 考虑如下计算图：
 
 .. image:: ../../_static/image/Examples/3_Tag_3.jpg
 

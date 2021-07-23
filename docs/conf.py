@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ZenusTech Documentations'
+project = '泽森科工教学指南'
 copyright = '2021, Jiayao Zhang '
 author = 'Jiayao Zhang'
 
