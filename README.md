@@ -33,14 +33,14 @@
 
 ![更新你的本地仓库](docs/_static/image/renew_repo.png)
 
-2. 修改你fork的repo。如何修改？例如想添加驾校信息，可以编辑'docs/content/life/drive.rst'；想添加全新的小节，例如在生活篇中加入 '美食'节（假如没有这个小节），可以在'docs/content/life'中新建'food.rst'文件，并添加相应内容，然后在`docs/index.rst`文件相应位置加入新的一行`content/life/food`。可参考'drive.rst'进行编辑。  
+2. 修改你fork的repo。如何修改？例如想添加物理仿真信息，可以编辑'docs/content/'；想添加全新的小节，例如在开发者中加入 '流体仿真'节（假如没有这个小节），可以在'docs/content/ZENO'中新建'fluid.rst'文件，并添加相应内容，然后在`docs/index.rst`文件相应位置加入新的一行`content/ZENO/fluid`。  
 
 3. 在本仓库中请求一个[pull request]. 点击new pull request, 点击compare across fork, pull request的左侧选中本仓库，右侧选中你的仓库。 确认后提交request. 
 
 4. 审核通过后，您的内容将出现在本手册中。
 
  
-NOTE: 如果需要加入图片，请参考docs/content/travel/saudi.rst。并且把图片上传到docs/_static/image这个文件夹
+NOTE: 如果需要加入图片，请参考docs/content/examples。并且把图片上传到docs/_static/image这个文件夹
 
 
 ## 我不想学Github的使用，我只是想贡献一份力量
