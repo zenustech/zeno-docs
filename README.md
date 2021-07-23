@@ -56,6 +56,7 @@ NOTE: 如果需要加入图片，请参考docs/content/examples。并且把图�
 * [Janice 张嘉瑶 ](https://github.com/jiayaozhang)
 * [archibate 彭于斌](https://github.com/archibate)
 * [littlemine 王鑫磊](https://github.com/littlemine)
+* [zhxx1987 张心欣](https://github.com/zhxx1987)
 
 以上就是全部啦，谢谢大家的贡献！！
 
