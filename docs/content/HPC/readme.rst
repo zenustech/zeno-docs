@@ -134,16 +134,21 @@ Bug 报告
 
 Arch Linux
 -----------
-sudo pacman -S gcc make cmake python python-pip python-numpy python-pyqt5 qt5-base libglvnd mesa
+
+.. code-block:: bash
+
+    sudo pacman -S gcc make cmake python python-pip python-numpy python-pyqt5 qt5-base libglvnd mesa
 
 
 Ubuntu 20.04
 --------------
-sudo apt-get install gcc make cmake python-is-python3 python-dev-is-python3 python3-pip libqt5core5a qt5dxcb-plugin libglvnd-dev libglapi-mesa libosmesa6
 
-python --version  # make sure Python version >= 3.7
-sudo python -m pip install -U pip
-sudo python -m pip install numpy PyQt5
+.. code-block:: bash
+
+    sudo apt-get install gcc make cmake python-is-python3 python-dev-is-python3 python3-pip libqt5core5a qt5dxcb-plugin libglvnd-dev libglapi-mesa libosmesa6
+    python --version  # make sure Python version >= 3.7
+    sudo python -m pip install -U pip
+    sudo python -m pip install numpy PyQt5
 
 
 Windows 10
@@ -151,13 +156,18 @@ Windows 10
 1. Install Python 3.8 64-bit. 重要: 确保你把python 3.8加入到路径里面! 重启后效果更佳！
 2. 在命令行敲CMD并输入以下命令:
 
-python -m pip install numpy PyQt5
+.. code-block:: bash
 
-（搞笑的事实：你会被指向Microsoft store如果python的路径没有安装正确的话 ：） 所以确保下载和安装成功，没有error，一般的warnings是ok的）
+    python -m pip install numpy PyQt5
 
-出现这种错误时: Could not install packages due to an EnvironmentError: 
-[Errno 13] Permission denied: 'c:\\python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll'': 
-尝试退出一些杀毒软件比如说：360杀毒软件, 因为他们可能会阻止 pip 复制 DLL files.
+
+.. note::
+    （搞笑的事实：你会被指向Microsoft store如果python的路径没有安装正确的话 ：） 所以确保下载和安装成功，没有error，一般的warnings是ok的）
+
+.. warning::    
+    出现这种错误时: Could not install packages due to an EnvironmentError: 
+    [Errno 13] Permission denied: 'c:\\python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll'': 
+    尝试退出一些杀毒软件比如说：360杀毒软件, 因为他们可能会阻止 pip 复制 DLL files.
 
 
 如果你有导入错误： 当输入QtGui的时候，DLL输入失败：尝试安装 Microsoft Visual C++ Redistributable。

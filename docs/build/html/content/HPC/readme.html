@@ -350,14 +350,18 @@
 </div>
 <div class="section" id="arch-linux">
 <h2>Arch Linux<a class="headerlink" href="#arch-linux" title="永久链接至标题">¶</a></h2>
-<p>sudo pacman -S gcc make cmake python python-pip python-numpy python-pyqt5 qt5-base libglvnd mesa</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pacman -S gcc make cmake python python-pip python-numpy python-pyqt5 qt5-base libglvnd mesa
+</pre></div>
+</div>
 </div>
 <div class="section" id="ubuntu-20-04">
 <h2>Ubuntu 20.04<a class="headerlink" href="#ubuntu-20-04" title="永久链接至标题">¶</a></h2>
-<p>sudo apt-get install gcc make cmake python-is-python3 python-dev-is-python3 python3-pip libqt5core5a qt5dxcb-plugin libglvnd-dev libglapi-mesa libosmesa6</p>
-<p>python –version  # make sure Python version &gt;= 3.7
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install gcc make cmake python-is-python3 python-dev-is-python3 python3-pip libqt5core5a qt5dxcb-plugin libglvnd-dev libglapi-mesa libosmesa6
+python --version  <span class="c1"># make sure Python version &gt;= 3.7</span>
 sudo python -m pip install -U pip
-sudo python -m pip install numpy PyQt5</p>
+sudo python -m pip install numpy PyQt5
+</pre></div>
+</div>
 </div>
 <div class="section" id="windows-10">
 <h2>Windows 10<a class="headerlink" href="#windows-10" title="永久链接至标题">¶</a></h2>
@@ -365,11 +369,19 @@ sudo python -m pip install numpy PyQt5</p>
 <li><p>Install Python 3.8 64-bit. 重要: 确保你把python 3.8加入到路径里面! 重启后效果更佳！</p></li>
 <li><p>在命令行敲CMD并输入以下命令:</p></li>
 </ol>
-<p>python -m pip install numpy PyQt5</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install numpy PyQt5
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
 <p>（搞笑的事实：你会被指向Microsoft store如果python的路径没有安装正确的话 ：） 所以确保下载和安装成功，没有error，一般的warnings是ok的）</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
 <p>出现这种错误时: Could not install packages due to an EnvironmentError:
 [Errno 13] Permission denied: ‘c:\python38\Lib\site-packages\PyQt5\Qt5\bin\d3dcompiler_47.dll’’:
 尝试退出一些杀毒软件比如说：360杀毒软件, 因为他们可能会阻止 pip 复制 DLL files.</p>
+</div>
 <p>如果你有导入错误： 当输入QtGui的时候，DLL输入失败：尝试安装 Microsoft Visual C++ Redistributable。</p>
 <ol class="arabic simple">
 <li><p>安装 Visual Studio 2019 社区版或者更后的版本 ( C++17 支持的).</p></li>
