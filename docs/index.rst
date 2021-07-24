@@ -50,7 +50,8 @@ ZENO生成手册
    :caption: ZENO中的ZFX(x)功能
 
    content/ZFX(x)/visual
-
+   content/ZFX(x)/various
+   
 .. toctree::
    :glob:
    :maxdepth: 1
