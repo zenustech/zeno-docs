@@ -6,7 +6,7 @@
 :github_url: https://github.com/jiayaozhang/ZenusTech-Documentation.git
 
 **************************
-泽森科工教学指南
+ZENO生成手册
 **************************
 
 .. toctree::

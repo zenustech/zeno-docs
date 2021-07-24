@@ -155,20 +155,14 @@
 <p class="caption" role="heading"><span class="caption-text">ZENO中的可视化功能</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../HighVisual/visual.html">ZENO中的可视化</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#zeno-zfxheatmap">在ZENO中， 我们内置了一些可视化节点帮助用户对仿真数据进行可视化， 结合ZFX以及对Heatmap的调整， 设计简单的可视化节点实则妙用无穷， 在此，我们介绍两种常见的使用场景：</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../HighVisual/visual.html#id1">1.      对于标量场的显示</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../HighVisual/visual.html#id2">2.      对于矢量场的显示</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id1">1.      对于标量场的显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id2">2.      对于矢量场的显示</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">ZENO中的AlgoLink功能</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../AlgoLink/visual.html">ZENO中的AlgoLink功能</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../AlgoLink/visual.html#zenoalgolinkzenoalgolinkzeno-subnets">在这一个教程中，我们向大家介绍一下zeno强大的AlgoLink功能以及如何基于zeno的AlgoLink功能创建可被复用的ZENO subnets。</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../AlgoLink/visual.html">ZENO中的AlgoLink功能</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">ZENO中的ZFX(x)功能</span></p>
 <ul class="current">
@@ -260,6 +254,9 @@
 <p>在这个场景中每个frame， zfx所表达的运算会被并行地施加给prim端口连入的几何图形，该根据ZFX所述， 该物体的pos会从它最初的位置被沿着法线方向往复反转， 其中time是我们从参数列表中获取进来的系统级变量， 它由GetTime函数来得到。
 这个案例的运行结果如下所示：</p>
 <img alt="../../_images/zfx.gif" src="../../_images/zfx.gif" />
+<p>&#64;符号表示这个变量属于被修改的primitive, 或者原primitive没有, 会被添加上去.
+$的意思是这是一个dict传递进入的变量.
+此外pos nrm clr vel等关键字, 是保留关键字, 是zeno系统的一般假设</p>
 </div>
 
 

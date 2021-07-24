@@ -15,3 +15,8 @@ Z{f(x)}是zeno使用的脚本语言，该脚本语言语法简便，可用于描
 
 
 .. image:: ../../_static/image/Visual/zfx.gif
+
+
+@符号表示这个变量属于被修改的primitive, 或者原primitive没有, 会被添加上去.  
+$的意思是这是一个dict传递进入的变量.
+此外pos nrm clr vel等关键字, 是保留关键字, 是zeno系统的一般假设
