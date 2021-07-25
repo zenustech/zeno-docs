@@ -50,5 +50,7 @@ $的意思是这是一个dict传递进入的变量.
 
 .. image:: ../../_static/image/Z{f(x)}/points.gif
 
+.. image:: ../../_static/image/Z{f(x)}/NBodyCode.gif
+
 .. image:: ../../_static/image/Z{f(x)}/6.gif
 
