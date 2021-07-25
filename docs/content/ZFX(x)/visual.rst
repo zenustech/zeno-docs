@@ -41,6 +41,16 @@ Z{f(x)}是zeno使用的脚本语言，该脚本语言语法简便，可用于描
 
 @符号表示这个变量属于被修改的primitive, 或者原primitive没有, 会被添加上去.  
 $的意思是这是一个dict传递进入的变量.
-此外pos nrm clr vel等关键字, 是保留关键字, 是zeno系统的一般假设
+此外@pos @nrm @clr @vel @rad等关键字, 是保留关键字, 是zeno系统对于坐标， 法线， 速度， 粒子半径的一般假设
+事实上, 从简单的几何与图元操作, 到更复杂的物理仿真(比如NBody星体仿真, 都可以直接由ZFX开发完成)
 
+.. image:: ../../_static/image/Z{f(x)}/2.png
+
+.. image:: ../../_static/image/Z{f(x)}/3.png
+
+.. image:: ../../_static/image/Z{f(x)}/4.png
+
+.. image:: ../../_static/image/Z{f(x)}/5.png
+
+.. image:: ../../_static/image/Z{f(x)}/6.gif
 
