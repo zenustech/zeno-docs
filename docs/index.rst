@@ -20,7 +20,7 @@ ZENO生存指北
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: 高性能仿真案例
+   :caption: 案例与教程
 
    content/Examples/HelloWorld
    content/Examples/TagandLines
