@@ -6,7 +6,7 @@
 :github_url: https://github.com/jiayaozhang/ZenusTech-Documentation.git
 
 **************************
-ZENO生成手册
+ZENO生存指北
 **************************
 
 .. toctree::
