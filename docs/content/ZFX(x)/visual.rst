@@ -18,8 +18,8 @@ Z{f(x)}是zeno使用的脚本语言，该脚本语言语法简便，可用于描
 
 一个类似于海滩的设置, 用来研究海浪在海滩边卷起的样子和能量. 在这个场景中, 如何产生海浪的边界条件是个问题, 我们参考现实中 wave pool(海浪池)的机械原理, 用zfx制作了我们的海浪产生装置
 
-.. image:: ../../_static/image/Z{f(x)}/wavegen.gif
-
+.. image:: ../../_static/image/Z{f(x)}/wavgen.gif
+.. image:: ../../_static/image/Z{f(x)}/wave.gif
 
 
 总结
