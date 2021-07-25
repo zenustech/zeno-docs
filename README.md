@@ -1,14 +1,14 @@
-# 泽森科工教学指南
-[《泽森科工教学指南》](https://zenustech-documentation.readthedocs.io/zh/latest/)诞生于2021年7月23日。本手册旨在集中与分享在研发ZENO过程中的诸多感悟、经验和技巧。《泽森科工教学指南》支持网页在线预览及信息检索。 我们希望本手册可以在我们和社区的共同维护下一直存活下去，并能给新入职的ZENO员工、在读学生、以及相关从业人员带来帮助。 感谢参与本手册编辑的作者们！同时期待更多作者们的加入！ 
+# ZENO生存指北
+[《ZENO生存指北》](https://zenustech-documentation.readthedocs.io/zh/latest/)诞生于2021年7月23日。本手册旨在集中与分享在研发ZENO过程中的诸多感悟、经验和技巧。《ZENO生存指北》支持网页在线预览及信息检索。 我们希望本手册可以在我们和社区的共同维护下一直存活下去，并能给新入职的ZENO员工、在读学生、以及相关从业人员带来帮助。 感谢参与本手册编辑的作者们！同时期待更多作者们的加入！ 
 
-网页同步版本网址：[《泽森科工教学指南》](https://zenustech-documentation.readthedocs.io/zh/latest/)。下图截取时间：2021年1月27日。本网站将在社区的协助下持续更新。 
+网页同步版本网址：[《ZENO生存指北》](https://zenustech-documentation.readthedocs.io/zh/latest/)。下图截取时间：2021年1月27日。本网站将在社区的协助下持续更新。 
 
-![《泽森科工教学指南》](docs/_static/image/website.png)
+![《ZENO生存指北》](docs/_static/image/website.png)
 
 ## 使用方法
-《泽森科工教学指南》支持随时随地网页访问，[《泽森科工教学指南》网址](https://zenustech-documentation.readthedocs.io/zh/latest/)。用户可以在《泽森科工教学指南》很方便地进行内容的检索。 
+《ZENO生存指北》支持随时随地网页访问，[《ZENO生存指北》网址](https://zenustech-documentation.readthedocs.io/zh/latest/)。用户可以在《ZENO生存指北》很方便地进行内容的检索。 
 
-![泽森科工教学指南手册检索](docs/_static/image/search.png)
+![ZENO生存指北检索](docs/_static/image/search.png)
 
 
 ## 说明
@@ -52,7 +52,7 @@ NOTE: 如果需要加入图片，请参考docs/content/examples。并且把图�
 
 
 ## 联系管理员
-如您有《泽森科工教学指南》的相关问题，可以咨询管理员：  
+如您有《ZENO生存指北》的相关问题，可以咨询管理员：  
 * [Janice 张嘉瑶 ](https://github.com/jiayaozhang)
 * [archibate 彭于斌](https://github.com/archibate)
 * [littlemine 王鑫磊](https://github.com/littlemine)
