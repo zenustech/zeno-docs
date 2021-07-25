@@ -162,15 +162,21 @@ Windows 10
 
 
 .. note::
-    （搞笑的事实：你会被指向Microsoft store如果python的路径没有安装正确的话 ：） 所以确保下载和安装成功，没有error，一般的warnings是ok的）
+     请注意：如果python的路径没有安装正确的话 ：），你会被指向Microsoft store 所以确保下载和安装成功，没有error，此外在安装的过程中遇到一般的warnings是ok的
 
 .. warning::    
-    出现这种错误时: Could not install packages due to an EnvironmentError: 
-    [Errno 13] Permission denied: 'c:\\python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll'': 
-    尝试退出一些杀毒软件比如说：360杀毒软件, 因为他们可能会阻止 pip 复制 DLL files.
+    当出现以下错误的时候: 
+    
+    .. code-block:: bash
+
+        Could not install packages due to an EnvironmentError: 
+        [Errno 13] Permission denied: 'c:\\python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll'': 
 
 
-如果你有导入错误： 当输入QtGui的时候，DLL输入失败：尝试安装 Microsoft Visual C++ Redistributable。
+这可能是由于杀毒软件导致的，可以尝试退出比如360杀毒软件： 因为他们可能会阻止 ZENO 复制 d3dcompiler_47.dll等各种dll文件 .
+
+
+另外当你输入QtGui的时候，发现DLL输入失败：可以尝试安装 Microsoft Visual C++ Redistributable。
 
 
 1. 安装 Visual Studio 2019 社区版或者更后的版本 ( C++17 支持的).
