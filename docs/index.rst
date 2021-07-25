@@ -12,7 +12,7 @@ ZENO生存指北
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: 开发者指南
+   :caption: ZENO生存指北
 
    content/HPC/readme
 
