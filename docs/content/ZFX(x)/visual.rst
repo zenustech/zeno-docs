@@ -44,13 +44,11 @@ $的意思是这是一个dict传递进入的变量.
 此外@pos @nrm @clr @vel @rad等关键字, 是保留关键字, 是zeno系统对于坐标， 法线， 速度， 粒子半径的一般假设
 事实上, 从简单的几何与图元操作, 到更复杂的物理仿真(比如NBody星体仿真, 都可以直接由ZFX开发完成)
 
-.. image:: ../../_static/image/Z{f(x)}/2.png
+.. image:: ../../_static/image/Z{f(x)}/colorfulZello.gif
 
-.. image:: ../../_static/image/Z{f(x)}/3.png
+.. image:: ../../_static/image/Z{f(x)}/zfx.gif
 
-.. image:: ../../_static/image/Z{f(x)}/4.png
-
-.. image:: ../../_static/image/Z{f(x)}/5.png
+.. image:: ../../_static/image/Z{f(x)}/points.gif
 
 .. image:: ../../_static/image/Z{f(x)}/6.gif
 
