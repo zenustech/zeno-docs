@@ -15,7 +15,7 @@ Category： 决定了它将会被系统归类到哪一个category
 Input， ouput， 定义了这个subgraph被使用时的输入和输出接口，数据将可以通过subgraph的输入接口进入系统，被计算使用后， 从输出接口传送到之后的计算节点。 
 一个subgraph中的算法可以自由定义，就和编程中开发函数一样， 一旦定义完成后，整个subgraph就等价于是一个节点执行单元，可以被主进程调用。
 
-.. image:: ../../_static/image/AlgoLinkTools/subnet.gif
+.. image:: ../../_static/image/Z{f(x)}/subnet.gif
 
 一个subgraph被开发完后看起来是这样的：
 
