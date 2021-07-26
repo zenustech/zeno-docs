@@ -26,8 +26,9 @@ Z{f(x)}是zeno使用的脚本语言，该脚本语言语法简便，可用于描
 
 造浪器优于海浪边界速度方程在于它不会向水体中emit新的水也不用设置过于复杂的出口条件, 基于物理实际环境, 只要把造浪器的机械运动规律调整正确, 基本上就可以获得足够真实的海浪运动.Z{f(x)}作为一个zeno的新特性, 具有并行化, GPU/CPU无差别运行等优势, 且无需编译, 可以快速地提供给创作者用以对场景进行编辑和调整, 快速得到反馈, 产生更多样的变化和结果. 在这个场景中很快地编辑出了造浪器的运动模型. 以上场景仿真耗时约2小时. 每帧约5000万粒子. 以1/24秒为frame单位, 共仿真300frame, 播放120~288.
 
-.. raw::html
-<video controls src="../_static/image/wave.mp4" width="1280" height="720"/>
+.. raw:: html
+
+<video controls src="../_static/image/wave.mp4"></video>
 
 一个简单的ZFX使用场景如下所示：
 
@@ -47,8 +48,9 @@ $的意思是这是一个dict传递进入的变量.
 
 .. image:: ../../_static/image/Z{f(x)}/colorfulZello.gif
 
-.. raw::html
-<video controls src="../_static/image/wave.mp4" width="1280" height="720"/>
+.. raw:: html
+
+<video controls src="../_static/image/wave.mp4"></video>
 
 .. image:: ../../_static/image/Z{f(x)}/points.gif
 
