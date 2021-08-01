@@ -50,7 +50,7 @@ ZENO生存指北
    :caption: ZENO中的ZFX(x)功能
 
    content/ZFX(x)/visual
-   content/ZFX(x)/various
+   content/ZFX(x)/sph
    
 .. toctree::
    :glob:

@@ -6,13 +6,13 @@
 :github_url: https://github.com/jiayaozhang/ZenusTech-Documentation.git
 
 **************************
-ZENO生成手册
+ZENO生存指北
 **************************
 
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: 开发者指南
+   :caption: ZENO生存指北
 
    content/HPC/readme
 
@@ -20,7 +20,7 @@ ZENO生成手册
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: 高性能仿真案例
+   :caption: 案例与教程
 
    content/Examples/HelloWorld
    content/Examples/TagandLines
@@ -50,7 +50,7 @@ ZENO生成手册
    :caption: ZENO中的ZFX(x)功能
 
    content/ZFX(x)/visual
-   content/ZFX(x)/various
+   content/ZFX(x)/sph
    
 .. toctree::
    :glob:
