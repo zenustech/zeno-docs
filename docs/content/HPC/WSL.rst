@@ -1,5 +1,12 @@
-在WSL中安装完整的ZENO(部分失败)
+在WSL中安装ZENO
 ===============================
+
+- 可以直接从命令行弹出zeno窗口
+- 可以调用GPU运算
+- 相比windows版本，可以使用更多插件
+- 目前gmpm拓展不能编译通过 
+
+步骤如下：
 
 1. 加入 windows 预览体验计划，将系统更新到 windows 11。
 
@@ -8,18 +15,16 @@
 .. figure:: ../../_static/image/install_on_wsl/intsll_wslg.png
    :alt: 
 
-1. 安装gedit，如果能弹出窗口，表示\ `WSLg <https://github.com/microsoft/wslg>`__\ 安装成功。
+3. 键入gedit，如果能弹出窗口，表示\ `WSLg <https://github.com/microsoft/wslg>`__\ 安装成功。
 
 .. figure:: ../../_static/image/install_on_wsl/use_wslg.png
-   :alt: 
-
-..
 
    `什么是WSLg <https://zhuanlan.zhihu.com/p/377263437>`__\ ：直接可以在wsl命令窗口中打开linux系统中的GUI程序，GUI程序的窗口就像是Windows中的普通程序一样显示。我希望能够安装有图形界面的WSL，这样才能使用ZENO。
 
    修改文件 /etc/apt/sources.list 更新ubuntu的源。
 
-   .. code:: 
+
+.. code:: 
 
       deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
       deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
@@ -116,8 +121,7 @@ Repository <https://apt.kitware.com/>`__\ 。过程中可能需要输入用户�
 最后安装完整的zeno
 ~~~~~~~~~~~~~~~~~~
 
-gmpm部分安装失败，undefined
-reference，提示gmpm有个.so文件没有链接成功。其他应该都能用。
+gmpm部分安装失败，其他应该都能用。
 
 
 .. figure:: ../../_static/image/install_on_wsl/zeno_full.png
