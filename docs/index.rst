@@ -15,7 +15,7 @@ ZENO生存指北
    :caption: ZENO生存指北
 
    content/HPC/readme
-   content/WSL
+   content/HPC/WSL
 
 
 .. toctree::
