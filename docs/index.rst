@@ -16,6 +16,7 @@ ZENO生存指北
 
    content/HPC/readme
    content/HPC/WSL
+   content/HPC/addzeno
 
 
 .. toctree::
