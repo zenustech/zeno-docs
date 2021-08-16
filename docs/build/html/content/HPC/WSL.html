@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>在WSL中安装ZENO &mdash; ZENO生存指北  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="在项目中嵌入式使用ZENO编辑器制作的计算图" href="addzeno.html" />
+    <link rel="prev" title="生存指北" href="readme.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> ZENO生存指北
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">ZENO生存指北</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">生存指北</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#unleash-your-genius-to-mimic-the-nature">Unleash your genius to mimic the nature! 觅秘自然，势能不凡</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#id2">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#zenozpc">ZENO中的高性能计算框架ZPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#zenoz-f-x">ZENO的脚本语言Z{f(x)}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#zeno">开发ZENO的原因</a></li>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#id3">灵活度</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#id4">性能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#id5">控制流</a></li>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#id6">统一性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#id7">可拓展性接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#id8">整合性</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#id9">用户终端安装</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#id10">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#id11">使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#bug">Bug 报告</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="readme.html#id12">开发者使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#id13">安装需求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#arch-linux">Arch Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#ubuntu-20-04">Ubuntu 20.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#windows-10">Windows 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">在WSL中安装ZENO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zeno">安装默认版本的zeno</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">安装完整版本的zeno</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cmake3-21">安装cmake3.21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cuda">安装cuda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">最后安装完整的zeno</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="addzeno.html">在项目中嵌入式使用ZENO编辑器制作的计算图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addzeno.html#zeno-zeno-zenovery-zeno">ZENO人， ZENO魂， ZENO的技术very的纯。 今天为大家带来的是zeno计算图往其他项目中嵌入式使用的教程。</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">案例与教程</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/HelloWorld.html">Example 1 HelloWorld</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/HelloWorld.html#zeno">ZENO几个重要概念：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/TagandLines.html">Example 2 Tag和连线,关键词</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/TagandLines.html#zeno">Zeno中的节点有以下几个重要的编辑概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#control-tag">Control Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#out">Out：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#mute">Mute：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#once">Once：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#view">View：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#id1">数据端口连线：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/VisualData.html">Example 3 在zeno读取并显示一个三维文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/ForLoop.html">Example 4 在Zeno中执行一个For循环</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#for">4.1 for循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#for-each">4.2 for Each循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#break-for">4.3 Break For 循环</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/ConditionControl.html">Example 5 在ZENO中进行条件控制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ConditionControl.html#zeno">在ZENO中进行条件控制</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/FrameZeno.html">Example 6 封装一个zeno子图并让他被其它场景调用</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ZENO中的各类子功能</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HighVisual/visual.html">ZENO中的可视化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id1">1.      对于标量场的显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id2">2.      对于矢量场的显示</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../AlgoLink/visual.html">ZENO中的AlgoLink功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/visual.html">ZENO中的Z{f(x)}功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/sph.html">ZENO上快速实现拉格朗日流体模拟功能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id1">背景介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id2">搭建场景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id3">搭建准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id4">搭建构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id5">模块化使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id6">编程调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id7">参考文献</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">We are hiring !</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HirePeople/investment.html">招聘</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HirePeople/investment.html#id2">招收对象</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ZENO生存指北</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>在WSL中安装ZENO</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/content/HPC/WSL.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wslzeno">
+<h1>在WSL中安装ZENO<a class="headerlink" href="#wslzeno" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>可以直接从命令行弹出zeno窗口</p></li>
+<li><p>可以调用GPU运算</p></li>
+<li><p>相比windows版本，可以使用更多插件</p></li>
+<li><p>目前gmpm拓展不能编译通过</p></li>
+</ul>
+<p>步骤如下：</p>
+<ol class="arabic simple">
+<li><p>加入 windows 预览体验计划，将系统更新到 windows 11。</p></li>
+<li><p>用管理员身份打开命令行窗口，执行<code class="docutils literal notranslate"><span class="pre">wsl</span> <span class="pre">--install</span></code>，然后重启。<a class="reference external" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">参考</a></p></li>
+</ol>
+<div class="figure align-default">
+<img alt="" src="../../_images/intsll_wslg.png" />
+</div>
+<ol class="arabic simple" start="3">
+<li><p>键入gedit，如果能弹出窗口，表示<a class="reference external" href="https://github.com/microsoft/wslg">WSLg</a>安装成功。</p></li>
+</ol>
+<div class="figure align-default" id="id3">
+<img alt="../../_images/use_wslg.png" src="../../_images/use_wslg.png" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://zhuanlan.zhihu.com/p/377263437">什么是WSLg</a>：直接可以在wsl命令窗口中打开linux系统中的GUI程序，GUI程序的窗口就像是Windows中的普通程序一样显示。我希望能够安装有图形界面的WSL，这样才能使用ZENO。</span><a class="headerlink" href="#id3" title="永久链接至图片">¶</a></p>
+<div class="legend">
+<p>修改文件 /etc/apt/sources.list 更新ubuntu的源。</p>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+
+<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+
+<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+
+<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">proposed</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">proposed</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+
+<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+</pre></div>
+</div>
+<div class="section" id="zeno">
+<h2>安装默认版本的zeno<a class="headerlink" href="#zeno" title="永久链接至标题">¶</a></h2>
+<p>基本照着Dockerfile来就行了</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">wget</span> <span class="n">git</span> <span class="n">gcc</span> <span class="n">g</span><span class="o">++</span> <span class="n">make</span> <span class="n">cmake</span> <span class="n">libboost</span><span class="o">-</span><span class="n">iostreams</span><span class="o">-</span><span class="n">dev</span> <span class="n">libboost</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">dev</span> <span class="n">libtbb</span><span class="o">-</span><span class="n">dev</span> <span class="n">libilmbase</span><span class="o">-</span><span class="n">dev</span> <span class="n">libopenexr</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">libeigen3</span><span class="o">-</span><span class="n">dev</span> <span class="n">libopenblas</span><span class="o">-</span><span class="n">dev</span> <span class="n">python</span><span class="o">-</span><span class="ow">is</span><span class="o">-</span><span class="n">python3</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="ow">is</span><span class="o">-</span><span class="n">python3</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">libglvnd</span><span class="o">-</span><span class="n">dev</span> <span class="n">libglapi</span><span class="o">-</span><span class="n">mesa</span> <span class="n">qt5dxcb</span><span class="o">-</span><span class="n">plugin</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitee</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">codespace1212</span><span class="o">/</span><span class="n">c</span><span class="o">-</span><span class="n">blosc</span><span class="o">.</span><span class="n">git</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="o">--</span><span class="n">branch</span><span class="o">=</span><span class="n">v1</span><span class="mf">.5.0</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">c</span><span class="o">-</span><span class="n">blosc</span> <span class="o">&amp;&amp;</span> <span class="n">mkdir</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cmake</span> <span class="o">..</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="o">-</span><span class="n">j32</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">../..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitee</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">zeng_gui</span><span class="o">/</span><span class="n">openvdb</span><span class="o">.</span><span class="n">git</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">openvdb</span> <span class="o">&amp;&amp;</span> <span class="n">mkdir</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cmake</span> <span class="o">..</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="o">-</span><span class="n">j32</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">../..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">config</span> <span class="nb">set</span> <span class="k">global</span><span class="o">.</span><span class="n">index</span><span class="o">-</span><span class="n">url</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">pybind11</span> <span class="n">numpy</span> <span class="n">PySide2</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">C</span> <span class="n">build</span> <span class="o">-</span><span class="n">j16</span>
+</pre></div>
+</div>
+<p>运行</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">zenqt</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="../../_images/zeno_default.png" />
+</div>
+</div>
+<div class="section" id="id1">
+<h2>安装完整版本的zeno<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="cmake3-21">
+<span id="cmake321"></span><h3>安装cmake3.21<a class="headerlink" href="#cmake3-21" title="永久链接至标题">¶</a></h3>
+<p>因为部分拓展的编译需要版本3.19以上的cmake，安装过程参考<a class="reference external" href="https://apt.kitware.com/">Kitware APT
+Repository</a>。过程中可能需要输入用户密码，所以一行一行粘贴比较好。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">apt</span><span class="o">.</span><span class="n">kitware</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">kitware</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">latest</span><span class="o">.</span><span class="n">asc</span> <span class="mi">2</span><span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="o">|</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">kitware</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span> <span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+<span class="n">echo</span> <span class="s1">&#39;deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ focal main&#39;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">kitware</span><span class="o">.</span><span class="n">list</span> <span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">kitware</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">kitware</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">cmake</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cuda">
+<h3>安装cuda<a class="headerlink" href="#cuda" title="永久链接至标题">¶</a></h3>
+<p>安装驱动，然后安装cuda toolkits</p>
+<div class="figure align-default">
+<img alt="" src="../../_images/install_cuda.png" />
+</div>
+</div>
+<div class="section" id="id2">
+<h3>最后安装完整的zeno<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>gmpm部分安装失败，其他应该都能用。</p>
+<div class="figure align-default">
+<img alt="../../_images/zeno_full.png" src="../../_images/zeno_full.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="addzeno.html" class="btn btn-neutral float-right" title="在项目中嵌入式使用ZENO编辑器制作的计算图" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="readme.html" class="btn btn-neutral float-left" title="生存指北" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2021, Jiayao Zhang .
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

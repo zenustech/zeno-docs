@@ -15,6 +15,8 @@ ZENO生存指北
    :caption: ZENO生存指北
 
    content/HPC/readme
+   content/HPC/WSL
+   content/HPC/addzeno
 
 
 .. toctree::
@@ -28,30 +30,26 @@ ZENO生存指北
    content/Examples/ForLoop
    content/Examples/ConditionControl
    content/Examples/FrameZeno
-
+   content/Examples/Ocean
 
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: ZENO中的可视化功能
+   :caption: ZENO中的各类子功能
 
    content/HighVisual/visual   
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :caption: ZENO中的AlgoLink功能
-
    content/AlgoLink/visual   
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :caption: ZENO中的ZFX(x)功能
-
    content/ZFX(x)/visual
    content/ZFX(x)/sph
-   
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: 开发者手册
+
+   content/Userguide/Numerical
+   content/Userguide/Primitive
+      
 .. toctree::
    :glob:
    :maxdepth: 1

@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Example 7 在ZENO中实现整个海洋 &mdash; ZENO生存指北  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> ZENO生存指北
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">ZENO生存指北</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HPC/readme.html">生存指北</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#unleash-your-genius-to-mimic-the-nature">Unleash your genius to mimic the nature! 觅秘自然，势能不凡</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id2">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#zenozpc">ZENO中的高性能计算框架ZPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#zenoz-f-x">ZENO的脚本语言Z{f(x)}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#zeno">开发ZENO的原因</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id3">灵活度</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id4">性能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id5">控制流</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id6">统一性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id7">可拓展性接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id8">整合性</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id9">用户终端安装</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id10">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id11">使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#bug">Bug 报告</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id12">开发者使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id13">安装需求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#arch-linux">Arch Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#ubuntu-20-04">Ubuntu 20.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#windows-10">Windows 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC/WSL.html">在WSL中安装ZENO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/WSL.html#zeno">安装默认版本的zeno</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/WSL.html#id1">安装完整版本的zeno</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/WSL.html#cmake3-21">安装cmake3.21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/WSL.html#cuda">安装cuda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/WSL.html#id2">最后安装完整的zeno</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC/addzeno.html">在项目中嵌入式使用ZENO编辑器制作的计算图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/addzeno.html#zeno-zeno-zenovery-zeno">ZENO人， ZENO魂， ZENO的技术very的纯。 今天为大家带来的是zeno计算图往其他项目中嵌入式使用的教程。</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">案例与教程</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/HelloWorld.html">Example 1 HelloWorld</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/HelloWorld.html#zeno">ZENO几个重要概念：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/TagandLines.html">Example 2 Tag和连线,关键词</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/TagandLines.html#zeno">Zeno中的节点有以下几个重要的编辑概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#control-tag">Control Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#out">Out：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#mute">Mute：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#once">Once：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#view">View：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#id1">数据端口连线：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/VisualData.html">Example 3 在zeno读取并显示一个三维文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/ForLoop.html">Example 4 在Zeno中执行一个For循环</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#for">4.1 for循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#for-each">4.2 for Each循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#break-for">4.3 Break For 循环</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/ConditionControl.html">Example 5 在ZENO中进行条件控制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ConditionControl.html#zeno">在ZENO中进行条件控制</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/FrameZeno.html">Example 6 封装一个zeno子图并让他被其它场景调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/Ocean.html">Example 7 在ZENO中实现整个海洋</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ZENO中的各类子功能</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HighVisual/visual.html">ZENO中的可视化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id1">1.      对于标量场的显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id2">2.      对于矢量场的显示</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../AlgoLink/visual.html">ZENO中的AlgoLink功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/visual.html">ZENO中的Z{f(x)}功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/sph.html">ZENO上快速实现拉格朗日流体模拟功能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id1">背景介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id2">搭建场景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id3">搭建准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id4">搭建构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id5">模块化使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id6">编程调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id7">参考文献</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发者手册</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Numerical.html">Numerical 数值节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Primitive.html">Primitive 三角网格</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">We are hiring !</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HirePeople/investment.html">招聘</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HirePeople/investment.html#id2">招收对象</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ZENO生存指北</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Example 7 在ZENO中实现整个海洋</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/jiayaozhang/ZenusTech-Documentation.git" class="fa fa-github"> 在 GitHub 上修改</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="example-7-zeno">
+<h1>Example 7 在ZENO中实现整个海洋<a class="headerlink" href="#example-7-zeno" title="永久链接至标题">¶</a></h1>
+<img alt="../../_images/7.png" src="../../_images/7.png" />
+<p>利用流体动力学制作视觉特效，已经成为“大片”的标配。</p>
+<img alt="../../_images/7_1.gif" src="../../_images/7_1.gif" />
+<p>而诸如洪水、烟雾、爆炸等特效计算的背后，实际上是用计算机程序在求解已有百年历史的“纳维-斯托克斯方程”：</p>
+<img alt="../../_images/7_2.webp" src="../../_images/7_2.webp" />
+<p>数十年来，科学家们为了计算机翼升力，已经从各个角度、各个姿势将其研究了百千遍。然而基于影视制作的特别需求，“水体模拟界”的特效工程师们对这个方程求解提出了新的要求。</p>
+<p>既要减少计算的内存或时间消耗，又要适用于大面积、大范围、大体积水体运动的仿真。另一方面，现有的仿真技术，只能在有界（bounded）的范围内进行三维水体（volumetric）运动形态解算，镜头一旦拉远，就穿帮了。</p>
+<img alt="../../_images/7_3.gif" src="../../_images/7_3.gif" />
+<p>如何低消耗地正确捕捉水体的形态、动态？近日，一篇题为”Ships, Splashes, and Waves on a Vast Ocean“, 论文的作者(一作 黄立博)来自于KAUST，泽森科工以及UCLA，作者将其放上了arXiv，并将发表于即将召开的图形学顶会siggraph asia 2021。</p>
+<img alt="../../_images/7_4.gif" src="../../_images/7_4.gif" />
+<p>在论文中，研究员提出了一种大海域仿真计算技术：创新地将边界元技术与传统的FLIP水体仿真方法融会贯通，构造出了目前已知能以最高效的计算手段仿真最大体积、大范围海水的方法。</p>
+<p>这项技术被reviewer称为：</p>
+<p>“push the new visual SOTA”。</p>
+<p>边界元技术通过对流体运动做有势无旋的假设，把大规模水体的“纳维-斯托克斯方程”简化成了伯努利方程：</p>
+<img alt="../../_images/7_05.webp" src="../../_images/7_05.webp" />
+<p>伯努利方程可以在不可压无散假设下，将原本需要在三维网格上求解的方程转化为了只需要在水体的表面上就能定义和求解的拉普拉斯方程。将问题从3维转化为了2维，这十分吸引人。  然而由于自身的多种理论局限性（奇点，边界积分，拓扑变化等）， 不常见于复杂的流体仿真。</p>
+<img alt="../../_images/7_5.webp" src="../../_images/7_5.webp" />
+<p>由于积分的奇点、控制方程的非线性、拓扑变化难以处理等问题，数学界论文中的“边界元法（BEM）”通常只能求解到波峰开始破碎的时刻。
+更多信息参见论文：
+Grilli et. al. A fully nonlinear model for three-dimensional overturning waves over arbitrary bottom, International Journal for Numerical Methods in Fluids
+为此，研究者们在Da Fang et. al. 2016(Surface Only Liquids)的基础上，用工程技巧弥补理论不足，将BEM进一步推广成了一种稳定地、独立就能模拟复杂水体和边界运动的技术：</p>
+<img alt="../../_images/7_6.gif" src="../../_images/7_6.gif" />
+<p>上图特效的计算，不存在三维仿真解算， 所有的计算未知量， 以及计算的时间积分量都仅仅存在于水体表面网格上，大大减少了计算的内存或时间消耗。
+因此，这样的计算优势，正好适用于大面积、大范围、大体积水体运动的仿真。</p>
+<img alt="../../_images/7_7.gif" src="../../_images/7_7.gif" />
+<p>如上所示，边界元建模由于对三维NS方程的近似足够充分， 足以自动地捕捉水体运动的细节现象， 包括翻卷的浪花。</p>
+<img alt="../../_images/7_8.gif" src="../../_images/7_8.gif" />
+<p>借助边界元法和体积模拟解算技术的耦合， 研究者们将“近景“处用严谨的三维体积解算所带来的细节效果和波浪，成功地通过边界元的海水仿真传递了出去。
+形象地说，是将“效果”传递到一个”无穷大“的海面上，并借由边界元海水的仿真，真实地创造了一个比三维解算深得多的”深海“。为近海面处水体的运动， 提供了正确的运动边界条件。</p>
+<img alt="../../_images/7_9.gif" src="../../_images/7_9.gif" />
+<p>图注：左：SWE的结果， 波形、波速与参考解三维NS仿真相去甚远。中：参考解，三维NS仿真。右：BEM计算的结果。
+对比一些顶级的影视技术公司曾采用的用shallowwater（潜水方程）来做海水拓展的技术方案。如上图所示，采用边界元以及伯努利方程这种建模方法得到的流体运动则和参考解十分吻合，同时大大降低了计算量。</p>
+<p>为什么shallowwater效果不好，泽森科工的研究者表示：
+“潜水方程由于在对纳维-斯托克斯方程简化的过程中做了过多简化假设（比如流体速度在y方向一致）， 所得出的结果，即使在不太深的水体运动中，也与真实解相去甚远， 难以捕捉大范围水体的真实运动。”
+对于纳维尔斯托克斯方程的求解历久弥新，看来基于物理的计算仍然是人们再现自然现象的最佳手段。</p>
+<img alt="../../_images/7_10.gif" src="../../_images/7_10.gif" />
+<p>图注：上：BEM+FLIP。中：参考解三维FLIP仿真（真心疼这台机器）。下：基于波动方程的仿真。</p>
+<p>在与其它基于波方程求解的对比中，研究者们发现，采用BEM+FLIP求解的方案，既能得到准确的波形，也能得到更多的水流细节。</p>
+<img alt="../../_images/7_11.gif" src="../../_images/7_11.gif" />
+<p>化有界为无界，便可以追求拟真的更高境。如上图中，可以看到前面的船产生的浪花甚至会影响到后面船体产生的浪花形态。</p>
+<img alt="../../_images/7_12.gif" src="../../_images/7_12.gif" />
+<p>由于边界元方法给出的速度场是等效于体积求解的，虽然未知量只定义在边界上，却可以在整个体积内用边界积分方法得出任意点的正确流速， 这使得对获得的仿真数据进行后期加工成为了可能。
+如上述动图所示，运用此方法，可以和任何标准化制作流程一样通过后期再对流体进行泡沫（white water）仿真解算来增加额外的细节和真实感。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2021, Jiayao Zhang .
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
