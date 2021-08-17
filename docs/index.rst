@@ -48,7 +48,25 @@ ZENO生存指北
    :caption: 开发者手册
 
    content/Userguide/Numerical
+   content/Userguide/control
+   content/Userguide/debug
+   content/Userguide/dict
+   content/Userguide/flipsolver
+   content/Userguide/frame
+   content/Userguide/list
+   content/Userguide/literal
+   content/Userguide/math
+   content/Userguide/openvdb
+   content/Userguide/particles
+   content/Userguide/portal
+   content/Userguide/rigid
+   content/Userguide/string
+   content/Userguide/subgraph
    content/Userguide/Primitive
+   content/Userguide/trimesh
+   content/Userguide/visualize
+   content/Userguide/zenofx
+   content/Userguide/function
       
 .. toctree::
    :glob:

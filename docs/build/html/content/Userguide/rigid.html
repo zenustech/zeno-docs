@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Rigid 节点 &mdash; ZENO生存指北  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="String 节点" href="string.html" />
+    <link rel="prev" title="Portal" href="portal.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> ZENO生存指北
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">ZENO生存指北</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HPC/readme.html">生存指北</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#unleash-your-genius-to-mimic-the-nature">Unleash your genius to mimic the nature! 觅秘自然，势能不凡</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id2">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#zenozpc">ZENO中的高性能计算框架ZPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#zenoz-f-x">ZENO的脚本语言Z{f(x)}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#zeno">开发ZENO的原因</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id3">灵活度</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id4">性能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id5">控制流</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id6">统一性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id7">可拓展性接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id8">整合性</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id9">用户终端安装</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id10">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id11">使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#bug">Bug 报告</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/readme.html#id12">开发者使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#id13">安装需求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#arch-linux">Arch Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#ubuntu-20-04">Ubuntu 20.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/readme.html#windows-10">Windows 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC/WSL.html">在WSL中安装ZENO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/WSL.html#zeno">安装默认版本的zeno</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HPC/WSL.html#id1">安装完整版本的zeno</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/WSL.html#cmake3-21">安装cmake3.21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/WSL.html#cuda">安装cuda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../HPC/WSL.html#id2">最后安装完整的zeno</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">案例与教程</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/HelloWorld.html">Example 1 HelloWorld</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/HelloWorld.html#zeno">ZENO几个重要概念：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/TagandLines.html">Example 2 Tag和连线,关键词</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/TagandLines.html#zeno">Zeno中的节点有以下几个重要的编辑概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#control-tag">Control Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#out">Out：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#mute">Mute：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#once">Once：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#view">View：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/TagandLines.html#id1">数据端口连线：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/VisualData.html">Example 3 在zeno读取并显示一个三维文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/ForLoop.html">Example 4 在Zeno中执行一个For循环</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#for">4.1 for循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#for-each">4.2 for Each循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ForLoop.html#break-for">4.3 Break For 循环</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/ConditionControl.html">Example 5 在ZENO中进行条件控制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/ConditionControl.html#zeno">在ZENO中进行条件控制</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples/FrameZeno.html">Example 6 封装一个zeno子图并让他被其它场景调用</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ZENO中的各类子功能</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HighVisual/visual.html">ZENO中的可视化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id1">1.      对于标量场的显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HighVisual/visual.html#id2">2.      对于矢量场的显示</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../AlgoLink/visual.html">ZENO中的AlgoLink功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/visual.html">ZENO中的Z{f(x)}功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/addzeno.html">在项目中嵌入式使用ZENO编辑器制作的计算图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/addzeno.html#zeno-zeno-zenovery-zeno">ZENO人， ZENO魂， ZENO的技术very的纯。 今天为大家带来的是zeno计算图往其他项目中嵌入式使用的教程。</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/Ocean.html">ZENO中实现整个海洋</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ZFX%28x%29/sph.html">ZENO上快速实现拉格朗日流体模拟功能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id1">背景介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id2">搭建场景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id3">搭建准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id4">搭建构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id5">模块化使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id6">编程调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ZFX%28x%29/sph.html#id7">参考文献</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发者手册</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Numerical.html">Numerical 数值节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Primitive.html">Primitive 三角网格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="control.html">Control 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debug 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">Dict 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flipsolver.html">Flipsolver 流体解算器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frame.html">Frame 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">List 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literal.html">Literal 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">Math 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openvdb.html">Openvdb 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="particles.html">Particle 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portal.html">Portal</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rigid 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="string.html">String 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subgraph.html">Subgraph 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trimesh.html">Trimesh 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize.html">Visualize 节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zenofx.html">Zenofx 节点</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">We are hiring !</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HirePeople/investment.html">招聘</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../HirePeople/investment.html#id2">招收对象</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ZENO生存指北</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Rigid 节点</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/jiayaozhang/ZenusTech-Documentation.git" class="fa fa-github"> 在 GitHub 上修改</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rigid">
+<h1>Rigid 节点<a class="headerlink" href="#rigid" title="永久链接至标题">¶</a></h1>
+<img alt="../../_images/rgd1.png" src="../../_images/rgd1.png" />
+<img alt="../../_images/rgd2.png" src="../../_images/rgd2.png" />
+<img alt="../../_images/rgd3.png" src="../../_images/rgd3.png" />
+<img alt="../../_images/rgd4.png" src="../../_images/rgd4.png" />
+<img alt="../../_images/rgd5.png" src="../../_images/rgd5.png" />
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="string.html" class="btn btn-neutral float-right" title="String 节点" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="portal.html" class="btn btn-neutral float-left" title="Portal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2021, Jiayao Zhang .
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
