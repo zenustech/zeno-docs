@@ -26,3 +26,7 @@ Primitive文件也可以转化成mesh, particles, tracetail，或者通过transf
 
 .. image:: ../../_static/image/install_guide/primitivemerge.png
 
+在importObjPath里面可以用MakeReadPath来导入mesh的路径。 PrimitiveCalNormal可以用来计算法线节点。
+
+PrimitiveSplitEdges可以用来将平滑mesh输出成棱角分明的三角面片。
+
