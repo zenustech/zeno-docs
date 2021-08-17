@@ -18,7 +18,7 @@ ZENO生存指北
    content/HPC/WSL
    
    
-   .. toctree::
+.. toctree::
    :glob:
    :maxdepth: 1
    :caption: 案例与教程
@@ -30,7 +30,7 @@ ZENO生存指北
    content/Examples/ConditionControl
    content/Examples/FrameZeno
    
-   .. toctree::
+.. toctree::
    :glob:
    :maxdepth: 1
    :caption: ZENO中的各类子功能
@@ -38,8 +38,8 @@ ZENO生存指北
    content/HighVisual/visual   
    content/AlgoLink/visual   
    content/ZFX(x)/visual
-   content/HPC/addzeno
-   content/Examples/Ocean
+   content/ZFX(x)/addzeno
+   content/ZFX(x)/Ocean
    content/ZFX(x)/sph
 
 .. toctree::
