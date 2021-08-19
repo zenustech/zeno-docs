@@ -1,93 +1,41 @@
-# ZENO node system
+# docsify-themeable
 
-[![CMake](https://github.com/zenustech/zeno/actions/workflows/cmake.yml/badge.svg)](https://github.com/zenustech/zeno/actions/workflows/cmake.yml) [![License](https://img.shields.io/badge/license-MPLv2-blue)](LICENSE) [![Version](https://img.shields.io/github/v/release/zenustech/zeno)](https://github.com/zenustech/zeno/releases)
+[![NPM](https://img.shields.io/npm/v/docsify-themeable.svg?style=flat-square)](https://www.npmjs.com/package/docsify-themeable)
+[![Codacy grade](https://img.shields.io/codacy/grade/860d40719cbd4e0f91e145b87ec7c29a.svg?style=flat-square)](https://www.codacy.com/app/jhildenbiddle/docsify-themeable?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jhildenbiddle/docsify-themeable&amp;utm_campaign=Badge_Grade)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/docsify-themeable/blob/master/LICENSE)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/docsify-themeable/badge)](https://www.jsdelivr.com/package/npm/docsify-themeable)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,docsify,developers,frontend)
 
-[Download](https://github.com/zenustech/zeno/releases) | [Repo](https://github.com/zenustech/zeno) | [About us](https://zenustech.com) | [Tutorial](https://zenustech.com/tutorial) | [Videos](https://space.bilibili.com/263032155) | [Q&A Forum](https://github.com/zenustech/zeno/discussions) | [Bug report](https://github.com/zenustech/zeno/issues)
+Docsify-themeable is a delightfully simple theme system for [docsify.js](//docsify.js.org). Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE10+).
 
-[国内高速下载](https://gitee.com/zenustech/zeno/releases) | [Gitee 镜像仓库](https://gitee.com/zenustech/zeno) | [公司主页](https://zenustech.com) | [中文教程](https://zenustech.com/tutorial) | [视频教程](https://space.bilibili.com/263032155) | [问答论坛](https://github.com/zenustech/zeno/discussions) | [BUG 反馈](https://github.com/zenustech/zeno/issues)
+- [Homepage](https://jhildenbiddle.github.io/docsify-themeable) - Live demo, documentation, and theme previews
+- [Demo Sandbox](https://codesandbox.io/s/xv36w4695o) - Online editor with demo docsify-themeable site
 
-Open-source node system framework, to change your algorithmic code into useful tools to create much more complicated simulations!
+## Screenshots
 
-![rigid3.zsg](/images/rigid3.jpg "arts/rigid3.zsg")
+#### Simple Theme
 
-ZENO is an OpenSource, Node based 3D system able to produce cinematic physics effects at High Efficiency, it was designed for large scale simulations and has been tested on complex setups.
-Aside of its simulation Tools, ZENO provides necessary visualization nodes for users to import and run simulations if you feel that the current software you are using is too slow.
+<p float="left">
+  <img alt="Simple theme cover page" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-cover.png" width="49%">
+  <img alt="Simple theme content" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-content.png" width="49%">
+</p>
 
-- [Why a new node system?](/motivation.md)
+#### Simple Dark Theme
 
+<p float="left">
+  <img alt="Simple dark theme cover page" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-dark-cover.png" width="49%">
+  <img alt="Simple dark theme content" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-dark-content.png" width="49%">
+</p>
 
-## Features
+## Contact
 
-Integrated Toolbox, from volumetric geometry process tools (OpenVDB), to state-of-art, commercially robust, highly optimized physics solvers and visualization
-nodes, and various VFX and simulation solutions based on our nodes (provided by .zsg file in `graphs/` folder).
-
-## Gallery
-
-![robot hit water](/images/crag_hit_water.gif)
-
-![SuperSonic Flow](/images/shock.gif)
-
-
-# End-user Installation
-
-## Download binary release
-
-Go to the [release page](https://github.com/zenustech/zeno/releases/), and click Assets -> download `zeno-linux-20xx.x.x.tar.gz`.
-Then, extract this archive, and simply run `./launcher` (`launcher.exe` for Windows), then the node editor window will shows up if everything is working well.
-
-## How to play
-
-There are some example graphs in the `graphs/` folder, you may open them in the editor and have fun!
-Hint: To run an animation for 100 frames, change the `1` on the top-left of node editor to `100`, then click `Run`.
-Also MMB to drag in the node editor, LMB click on sockets to create connections. MMB drag in the viewport to orbit camera, Shift+MMB to pan camera.
-More details are available in [our official tutorial](https://zenustech.com/tutorial).
-
-## Bug report
-
-If you find the binary version didn't worked properly or some error message has been thrown on your machine, please let me know by opening an [issue](https://github.com/zenustech/zeno/issues) on GitHub, thanks for you support!
-
-
-# Developer Build
-
-To build ZENO, you need:
-
-- GCC 9+ or MSVC 19+, CMake 3.12+, and Python 3.6+ to build ZENO.
-- Pybind11, NumPy and PySide2 (Qt for Python) to run ZENO editor.
-- (Optional) OpenVDB for building volume nodes; CUDA for GPU nodes.
-
-> Hint: for Python, please try avoid using virtualenv and Conda if possible.
-> WSL is also not recommended because of its limited GUI and OpenGL support.
-
-Click links below for detailed setup for each platform:
-
-- [Windows 10](/dev_win10.md)
-- [Ubuntu 20.04](/dev_ubuntu20.md)
-- [CentOS 7](/dev_centos7.md)
-- [Arch Linux](/dev_archlinux.md)
-
-After finishing building, use `run.py` to run ZENO for development! You may click `File -> Open` to play `graphs/LorenzParticleTrail.zsg` to confirm everything is working well :)
-
-
-# Miscellaneous
-
-## Write your own extension!
-
-See [zenustech/zeno_addon_wizard](https://github.com/zenustech/zeno_addon_wizard) for an example on how to write custom nodes in ZENO.
-
-## Contributors
-
-Thank you to all the people who have already contributed to ZENO!
-
-[![Contributors](https://contrib.rocks/image?repo=zenustech/zeno)](https://github.com/zenustech/zeno/graphs/contributors)
+- Create a [GitHub issue](https://github.com/jhildenbiddle/docsify-themeable/issues) for bug reports, feature requests, or questions
+- Follow [@jhildenbiddle](https://twitter.com/jhildenbiddle) for announcements
+- Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/docsify-themeable) or ❤️ [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,developers,frontend,javascript) to support the project!
 
 ## License
 
-ZENO is licensed under the Mozilla Public License Version 2.0, see [LICENSE](/LICENSE) for more information.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/jhildenbiddle/docsify-themeable/blob/master/LICENSE) for details.
 
-## Contact us
+Copyright (c) John Hildenbiddle ([@jhildenbiddle](https://twitter.com/jhildenbiddle))
 
-You may contact us via WeChat:
-
-* @zhxx1987: shinshinzhang
-
-* @archibate: tanh233

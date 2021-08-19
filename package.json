@@ -1,5 +1,77 @@
 {
-  "dependencies": {
-    "docsify-cli": "^4.4.3"
+  "name": "docsify-themeable",
+  "version": "0.8.4",
+  "description": "A delightfully simple theme system for docsify.js. Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE10+).",
+  "author": "John Hildenbiddle",
+  "license": "MIT",
+  "homepage": "https://jhildenbiddle.github.io/docsify-themeable/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://jhildenbiddle@github.com/jhildenbiddle/docsify-themeable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhildenbiddle/docsify-themeable/issues"
+  },
+  "keywords": [
+    "css",
+    "custom",
+    "docs",
+    "docsify",
+    "documentation",
+    "properties",
+    "theme",
+    "themes",
+    "themeable",
+    "variables"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ],
+  "files": [
+    "dist",
+    "src/scss"
+  ],
+  "main": "dist/js/docsify-themeable.js",
+  "unpkg": "dist/js/docsify-themeable.min.js",
+  "scripts": {
+    "prepare": "run-s clean build",
+    "build": "npm-run-all build:scss --parallel build:js build:pcss",
+    "build:js": "rollup -c",
+    "build:pcss": "postcss build/css/**/*.css --dir dist/css --use postcss-remove-null postcss-discard-empty postcss-flexbugs-fixes autoprefixer --map",
+    "build:scss": "node-sass --output-style compressed src/scss/themes -o build/css --source-map true --source-map-contents true --include-path node_modules",
+    "clean": "rimraf build/* dist/* docs/css docs/js",
+    "serve": "node server.js",
+    "start": "run-p watch serve",
+    "watch": "run-p 'build:* -- -w'",
+    "prewatch": "npm run build:scss",
+    "version": "npm run prepare"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.14",
+    "compression": "^1.7.4",
+    "css-vars-ponyfill": "^2.4.4",
+    "eslint": "^7.25.0",
+    "eslint-plugin-html": "^6.1.2",
+    "include-media": "^1.4.9",
+    "lodash.merge": "^4.6.2",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.2",
+    "postcss-discard-empty": "^4.0.1",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-remove-null": "^1.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.45.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass-utilities": "0.0.4"
   }
 }
