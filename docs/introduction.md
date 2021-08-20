@@ -28,6 +28,10 @@ nodes, and various VFX and simulation solutions based on our nodes (provided by 
 
 # Miscellaneous
 
+## Blender addon
+
+Blender user? Be sure to check out [ZenoBlend](https://github.com/zenustech/zenoblend)!
+
 ## Contact & Support
 
 - Create a [GitHub issue](https://github.com/zenustech/zeno/issues) for bug reports, feature requests, or questions.
@@ -36,9 +40,9 @@ nodes, and various VFX and simulation solutions based on our nodes (provided by 
 
 ## License
 
-This project is licensed under the [Mozilla Public License](https://github.com/zenustech/zeno/blob/master/LICENSE).
+This project is licensed under the [Mozilla Public License 2.0](https://github.com/zenustech/zeno/blob/master/LICENSE).
 
-Copyright (c) ZENUSTECH ([@ZENUS](https://github.com/zenustech/zeno))
+Copyright (c) Zenus Technology ([@zenustech](https://github.com/zenustech))
 
 <!-- GitHub Buttons -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- script async defer src="https://buttons.github.io/buttons.js"></script -->

@@ -40,7 +40,7 @@ sudo make install
 cd ../..
 ```
 
-See also [`Dockerfile`](/Dockerfile) as a reference for full installing steps.
+See also [`Dockerfile`](https://github.com/zenustech/zeno/blob/master/Dockerfile) as a reference for full installing steps.
 
 ## Build ZENO
 

@@ -1,14 +1,13 @@
 - [Introduction](introduction)
+- [Developer Build](dev/build)
+- [Installation](installation)
 - [Quick Start](quick-start)
 - [Examples](example)
-- [Functions](themes)
-- [User Guide](userguide)
-- [Hiring](hire)
-
-
+- [Functions](functions)
+- [Hiring](hiring)
 
 - **Links**
-- [![Code](assets/img/code.svg)Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
-- [![Github](assets/img/github.svg)Github](https://github.com/zenustech)
-- [![NPM](assets/img/npm.svg)NPM](https://www.npmjs.com/package/docsify-themeable)
-- [![Twitter](assets/img/twitter.svg)@jhildenbiddle](http://twitter.com/jhildenbiddle)
+- [![Github](assets/img/github.svg)Github](https://github.com/zenustech/zeno)
+- [![Gitee](assets/img/code.svg)Gitee](https://gitee.com/zenustech/zeno)
+- [![Website](assets/img/npm.svg)Website](https://zenustech.com)
+- [![Twitter](assets/img/twitter.svg)@archibate](http://twitter.com/archibate)

@@ -9,6 +9,6 @@ Zenus拆解开来，分成Zen，禅宗、佛之意，Venus，则是维纳斯，�
 - 2. powerful and efficient particle analysis calculation
 - 3. hign performace computing on IOS and Android
 
-[Get Started](introduction)
-[Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
+[Get Started](/installation)
+[Introduction](/introduction)
 [GitHub](https://github.com/zenustech/zeno)
