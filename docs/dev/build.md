@@ -1,5 +1,7 @@
 # Developer Build
 
+## Requirements
+
 To build ZENO, you need:
 
 - GCC 9+ or MSVC 19+, CMake 3.12+, and Python 3.6+ to build ZENO.

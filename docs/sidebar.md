@@ -2,7 +2,7 @@
 - [Developer Build](dev/build)
 - [Installation](installation)
 - [Quick Start](quick-start)
-- [Examples](example)
+- [Examples](examples)
 - [Functions](functions)
 - [Hiring](hiring)
 
