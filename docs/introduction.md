@@ -26,55 +26,7 @@ nodes, and various VFX and simulation solutions based on our nodes (provided by 
 ![SuperSonic Flow](/images/shock.gif)
 
 
-# End-user Installation
-
-## Download binary release
-
-Go to the [release page](https://github.com/zenustech/zeno/releases/), and click Assets -> download `zeno-linux-20xx.x.x.tar.gz`.
-Then, extract this archive, and simply run `./launcher` (`launcher.exe` for Windows), then the node editor window will shows up if everything is working well.
-
-## How to play
-
-There are some example graphs in the `graphs/` folder, you may open them in the editor and have fun!
-Hint: To run an animation for 100 frames, change the `1` on the top-left of node editor to `100`, then click `Run`.
-Also MMB to drag in the node editor, LMB click on sockets to create connections. MMB drag in the viewport to orbit camera, Shift+MMB to pan camera.
-More details are available in [our official tutorial](https://zenustech.com/tutorial).
-
-## Bug report
-
-If you find the binary version didn't worked properly or some error message has been thrown on your machine, please let me know by opening an [issue](https://github.com/zenustech/zeno/issues) on GitHub, thanks for you support!
-
-
-# Developer Build
-
-To build ZENO, you need:
-
-- GCC 9+ or MSVC 19+, CMake 3.12+, and Python 3.6+ to build ZENO.
-- Pybind11, NumPy and PySide2 (Qt for Python) to run ZENO editor.
-- (Optional) OpenVDB for building volume nodes; CUDA for GPU nodes.
-
-> Hint: for Python, please try avoid using virtualenv and Conda if possible.
-> WSL is also not recommended because of its limited GUI and OpenGL support.
-
-Click links below for detailed setup for each platform:
-
-- [Windows 10](/docs/dev_win10.md)
-- [Ubuntu 20.04](/docs/dev_ubuntu20.md)
-- [CentOS 7](/docs/dev_centos7.md)
-- [Arch Linux](/docs/dev_archlinux.md)
-
-After finishing building, use `run.py` to run ZENO for development! You may click `File -> Open` to play `graphs/LorenzParticleTrail.zsg` to confirm everything is working well :)
-
-
 # Miscellaneous
-
-## Write your own extension!
-
-See [zenustech/zeno_addon_wizard](https://github.com/zenustech/zeno_addon_wizard) for an example on how to write custom nodes in ZENO.
-
-## Blender addon
-
-Like Blender? Be sure to check out [ZenoBlend](https://github.com/zenustech/zenoblend)!
 
 ## Contact & Support
 
