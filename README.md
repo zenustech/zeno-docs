@@ -1,6 +1,6 @@
 # ZENO Documentation
 
-Preview: https://zeno.archibate.top
+Preview: http://zeno.archibate.top
 
 ## Install requirements
 
