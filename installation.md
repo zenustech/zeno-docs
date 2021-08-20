@@ -1,4 +1,4 @@
-# End-user Installation
+# Installation
 
 ## Download binary release
 
