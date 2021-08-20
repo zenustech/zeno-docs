@@ -1,7 +1,7 @@
 # Introduction
 
 [![CMake](https://github.com/zenustech/zeno/actions/workflows/cmake.yml/badge.svg)](https://github.com/zenustech/zeno/actions/workflows/cmake.yml) [![License](https://img.shields.io/badge/license-MPLv2-blue)](LICENSE) [![Version](https://img.shields.io/github/v/release/zenustech/zeno)](https://github.com/zenustech/zeno/releases)
-<a class="github-button" href="https://github.com/zenustech/zeno" data-icon="octicon-star" data-show-count="true" aria-label="Star zenustech/zeno on GitHub">Star</a>
+<!--a class="github-button" href="https://github.com/zenustech/zeno" data-icon="octicon-star" data-show-count="true" aria-label="Star zenustech/zeno on GitHub">Star</a-->
 
 [Download](https://github.com/zenustech/zeno/releases) | [Repo](https://github.com/zenustech/zeno) | [About us](https://zenustech.com) | [Tutorial](https://zenustech.com/tutorial) | [Videos](https://space.bilibili.com/263032155) | [Q&A Forum](https://github.com/zenustech/zeno/discussions) | [Bug report](https://github.com/zenustech/zeno/issues)
 
@@ -116,20 +116,18 @@ for more information.
 
 ![blender.blend](/images/blender.jpg "assets/blender.blend")
 
-<!--
-## ZenCompute (@littlemine)
-
-Open-source code development framework to easily develop high-performance physical simulation code that both run on cpu and gpu with out too much effort. Now intergrated into ZENO.
-
-[![ZenCompute development framework](/images/zencompute.png)](https://github.com/zenustech/zpc)
--->
-
 
 # Miscellaneous
 
 ## Blender addon
 
 Blender user? Be sure to check out [ZenoBlend](https://github.com/zenustech/zenoblend)!
+
+## ZenCompute (@littlemine)
+
+Open-source code development framework to easily develop high-performance physical simulation code that both run on cpu and gpu with out too much effort. Now intergrated into ZENO.
+
+[![ZenCompute development framework](/images/zencompute.png)](https://github.com/zenustech/zpc)
 
 ## Contact & Support
 

@@ -9,5 +9,5 @@
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/zenustech/zeno)
 - [![Gitee](assets/img/code.svg)Gitee](https://gitee.com/zenustech/zeno)
-- [![Website](assets/img/npm.svg)Website](https://zenustech.com)
+- [![Zenustech](assets/img/npm.svg)Zenustech](https://zenustech.com)
 - [![Twitter](assets/img/twitter.svg)@archibate](http://twitter.com/archibate)
