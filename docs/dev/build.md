@@ -13,10 +13,10 @@ To build ZENO, you need:
 
 Click links below for detailed setup for each platform:
 
-- [Windows 10](dev_win10)
-- [Ubuntu 20.04](dev_ubuntu20)
-- [CentOS 7](dev_centos7)
-- [Arch Linux](dev_archlinux)
+- [Windows 10](dev/dev_win10)
+- [Ubuntu 20.04](dev/dev_ubuntu20)
+- [CentOS 7](dev/dev_centos7)
+- [Arch Linux](dev/dev_archlinux)
 
 After finishing building, use `run.py` to run ZENO for development! You may click `File -> Open` to play `graphs/LorenzParticleTrail.zsg` to confirm everything is working well :)
 

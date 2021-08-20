@@ -61,7 +61,7 @@ cmake --build build --parallel
 ```
 
 If you got:
-```bash
+```
 This application failed to start because it could not find or load the Qt platform plugin "xxx"
 
 Reinstalling the application may fix this problem.

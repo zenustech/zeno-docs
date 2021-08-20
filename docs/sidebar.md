@@ -1,9 +1,9 @@
 - [Introduction](introduction)
-- [Developer Build](dev/build)
 - [Installation](installation)
 - [Quick Start](quick-start)
 - [Examples](examples)
 - [Functions](functions)
+- [Developer Build](dev/build)
 - [Hiring](hiring)
 
 - **Links**

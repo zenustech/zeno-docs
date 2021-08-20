@@ -7,7 +7,7 @@
 sudo pacman -S --noconfirm gcc make cmake python python-pip python-numpy pyside2
 ```
 
-See also [`/scripts/Dockerfile.archlinux`](https://github.com/zenustech/zeno/blob/master/scripts/Dockerfile.archlinux) for full installing steps.
+See also [`scripts/Dockerfile.archlinux`](https://github.com/zenustech/zeno/blob/master/scripts/Dockerfile.archlinux) for full installing steps.
 
 ## Build ZENO
 
