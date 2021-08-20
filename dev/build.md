@@ -8,8 +8,8 @@ To build ZENO, you need:
 - Pybind11, NumPy and PySide2 (Qt for Python) to run ZENO editor.
 - (Optional) OpenVDB for building volume nodes; CUDA for GPU nodes.
 
-> Hint: for Python, please try avoid using virtualenv and Conda if possible.
-> WSL is also not recommended because of its limited GUI and OpenGL support.
+?> Hint: for Python, please try avoid using virtualenv and Conda if possible.
+?> WSL is also not recommended because of its limited GUI and OpenGL support.
 
 Click links below for detailed setup for each platform:
 
