@@ -7,11 +7,11 @@ Preview: http://zeno.archibate.top
 ```bash
 pacman -S nodejs npm
 npm config set registry https://registry.npm.taobao.org
-npm i docsify-cli
+npm i docsify-cli -g
 ```
 
 ## Run Development Server
 
 ```bash
-npx docsify serve
+docsify serve
 ```
