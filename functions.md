@@ -1,5 +1,11 @@
 # ZENO中的各种子功能
 
+
+## 视频学习教程
+
+[![IMAGE_ALT](/images/1.png)](https://www.bilibili.com/video/BV1Wg41157HM)
+
+
 ## 可视化功能
 
 在ZENO中， 我们内置了一些可视化节点帮助用户对仿真数据进行可视化， 结合ZFX以及对Heatmap的调整， 设计简单的可视化节点实则妙用无穷， 在此，我们介绍两种常见的使用场景：
@@ -199,3 +205,4 @@ ZENO提供了很方便的调试工具。在这个可视化编程工具里，我�
 * [1]. Müller M, Charypar D, Gross M H. Particle-based fluid simulation for interactive applications[C]//Symposium on Computer animation. 2003: 154-159.
 
 * [2]. Band S, Gissler C, Ihmsen M, et al. Pressure boundaries for implicit incompressible SPH[J]. ACM Transactions on Graphics (TOG), 2018, 37(2): 1-11.
+
