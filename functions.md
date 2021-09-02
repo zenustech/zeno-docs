@@ -60,12 +60,46 @@ ExportPrimitive节点可以用来导出节点
 
 ## 使用OpenVDB节点进行SDF操作（膨胀、腐蚀、顶帽、黑帽）
 
+[![IMAGE_ALT](/images/v.png)](https://www.bilibili.com/video/BV1bq4y1S7uT?spm_id_from=333.999.0.0)
+
+首先导入一个猪头模型，并加上法线，这里面SDFToPly中，SDF表示有向距离场
+
+![example](/images/v1.png)
+
+voxel size 越大，最后生成的mesh也会变得越模糊. VDB可以直接进行加法或者减法, 对SDF进行膨胀或者腐蚀
+
+![example](/images/v0.png)
+
+![example](/images/v3.png)
+
+在NumericFloat里面正值话的是膨胀，负值的话即为腐蚀. 
 
 
 ## 自制几何节点插件，妙用SDF实现猴头沾水动画
 
+[![IMAGE_ALT](/images/s.png)](https://www.bilibili.com/video/BV1Wg41157HM?spm_id_from=333.999.0.0)
 
+我们先到GitHub Page里面下载zenoblend, 并把它作为一个zip插件加入到blender的preference里面
 
+我们首先在subgraph里面找到suboutput
+
+![example](/images/s1.png)
+
+![example](/images/s2.png)
+
+连好节点以后，点击鼠标右键选apply, 可以看到了上图的mesh的生成了
+
+![example](/images/s3.png)
+
+在MakeMultilineString节点里面，Value中改变任意我们需要的参数
+
+![example](/images/s3.png)
+
+![example](/images/s4.png)
+
+我们可以如图做着帧动画了，并在makestring节点里面插帧，其中水面会自动跟着猴子头运动, 每走一帧的时候会重新加载
+
+为了加快速度可以缓存，把nodetree改名为nodetreeframe，这样就可以做帧缓冲，只需要再点击Apply Graph
 
 ## 开源流体仿真插件，更逼真的液体表面
 
