@@ -48,6 +48,15 @@ NumericFloat节点用于得出float的值，PrintNumeric节点用于在显示出
 
 在TransformPrimitive里面将translation和NumericVec3节点相连就可以上下左右移动了。同时，eulerXYZ和NumericVec3节点相连，就可以在三维坐标里面任意旋转。
 
+![example](/images/num4.png)
+
+如图所示，NumericOperator里面lhs可添加NumericCounter用于计算帧数，NumericVec3用户作为mesh的旋转方向. 这也是节点编程实现动画的一个典型例子
+
+ExportPrimitive节点可以用来导出节点
+
+![example](/images/num5.png)
+
+还可以在blender里面下载stop-obj.zip插件然后从preference里面导入其插件, 从而可以导出任何一帧的obj或者obj animation
 
 ## 使用OpenVDB节点进行SDF操作（膨胀、腐蚀、顶帽、黑帽）
 
